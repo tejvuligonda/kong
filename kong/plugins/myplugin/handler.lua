@@ -16,14 +16,6 @@ function plugin:access(plugin_conf)
             kong.log.err(err)
             return
         end
-    else
-        local main_upstream = plugin_conf.main_upstream
-        local ok, err = kong.service.set_upstream(main_upstream)
-        if not ok then
-            kong.log.notice("can't send to " .. main_upstream)
-            kong.log.err(err)
-            return
-        end
     end
 end
 
