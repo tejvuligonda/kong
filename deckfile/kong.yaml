@@ -8,7 +8,6 @@ services:
   - config:
       request_header: Hello-World
       response_header: Bye-World
-      ttl: 600
     enabled: true
     name: myplugin
     protocols:
